@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=UTF-8" />
+        <title>卡牌資料</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.5.0/d3.min.js"></script>
+        <style>
+            body {
+                background-color: #323232;
+                font-family: 'Trirong', georgia, times, serif;
+                font-weight: 200;
+                font-size: 18px;
+                }
+            
+            body, a {
+                color: #808080;
+            }
+
+            div#layout {
+                width: auto;
+                height: auto;
+                display: flex;
+                margin: 10px;
+            }
+
+            div#card_rules {
+                width: 40%;
+                height: auto;
+                margin: 10px;
+            }
+
+            div#card_images {
+                width: 60%;
+                height: auto;
+                margin: 10px;
+            }
+            
+            .grid {
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: repeat(auto-fill, minmax(140px,1fr));
+                grid-auto-rows: 220px;
+            }
+
+            .char {
+                border-radius: 3px;
+                padding: 0.5em;
+                background-color:white;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+            }
+
+            .charContent {
+                text-align: center;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0.5em;
+                margin: auto;
+            }
+
+            .char p { 
+                display: inline-block;
+                background-color:rgba(28,28,28,1);
+                font-family: "LiGothic", "FangSong", Arial, serif;
+                font-size: 60%;
+                line-height: auto;
+                color:rgba(210,210,210,1); 
+                padding: 3px 8px 3px 8px;
+            }
+
+            h2.title {
+                color:rgba(210,210,210,1);
+            }
+
+            table, th, td {
+                border: 1px solid white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id=layout>
+            <div id="card_rules">
+                <h2 class="title">勝利規則</h2>
+                <table>
+                <tbody>
+                    <tr>
+                        <th width="10%">點數</th>
+                        <th width="25%">役名</th>
+                        <th width="55%">條件</th>
+                    </tr>
+                    <tr align="center">
+                        <td>10</td>
+                        <td>五光</td>
+                        <td>得到全部5張光牌。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>8</td>
+                        <td>四光</td>
+                        <td>得到不包含「柳間小野道風」之外其餘4張光牌。
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>7</td>
+                        </td>
+                        <td>雨四光</td>
+                        <td>得到「柳間小野道風」加上另外3張光牌。
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>5</td>
+                        <td>三光</td>
+                        <td>得到不包含「柳間小野道風」之外得到其餘4張光牌裡面的3張。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>5</td>
+                        <td>松桐坊主</td>
+                        <td>得到「松上鶴」、「芒上月」、「桐上鳳凰」。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>5</td>
+                        <td>豬鹿蝶</td>
+                        <td>得到「萩間豬」、「楓間鹿」、「牡丹蝶」。</td>
+                    </tr>
+                        <tr align="center">
+                        <td>5</td>
+                        <td>表菅原</td>
+                        <td>得到「松上鶴」、「梅上鶯」、「櫻上幕簾」。此役別稱為「<b><span lang="ja">梅松櫻</span></b>」、「<b><span lang="ja">大三（おおざん）</span></b>」。
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>5或3</td>
+                        <td>草(草短)</td>
+                        <td>得到「藤上短冊」、「菖蒲上短冊」、「萩上短冊」。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>5或3</td>
+                            <td>花見酒(賞花一浮白)</td>
+                            <td>得到「櫻上幕簾」和「菊上盃」，此役很容易做出，多半不採用或僅使用於追加役(bonus)，就是光靠他們不能勝負及こいこい但在胡其他役種的時候可以計算點數。另外也有得到「柳間小野道風」的時候就不算（<span lang="ja">雨流れ</span>）或得到桐就不算（<span lang="ja">霧流れ</span>）的規則。
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>5或3</td>
+                        <td>月見酒(賞月一浮白)</td>
+                        <td>得到「芒上月」和「菊上盃」，多半不採用或僅使用於追加役(bonus)，其他規則和「花見酒」相同。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>6或5或3</td>
+                        <td>飲（鐵炮）</td>
+                        <td>得到「櫻上幕簾」、「菊上盃」和「芒上月」。不能和花見酒或月見酒複合，多半不採用或僅使用於追加役(bonus)。也稱為月花酒、花月見，其他規則和「花見酒」相同。
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>5</td>
+                        <td>赤短</td>
+                        <td>得到「松上赤短（<span lang="ja">あかよろし</span>）」、「梅上赤短（<span lang="ja">あかよろし</span>）」、「櫻上赤短（<span lang="ja">みよしの</span>）」。此役別稱為「<b><span lang="ja">裏菅原</span></b>」、「<b><span lang="ja">小三（こざん）</span></b>」。
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>5</td>
+                        <td>青短</td>
+                        <td>得到「牡丹上青短」、「菊上青短」、「楓上青短」。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>7</td>
+                        <td>七短</td>
+                        <td>得到除「柳上短冊」以外的短冊7張。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>5</td>
+                        <td>六短</td>
+                        <td>得到除「柳上短冊」以外的短冊6張。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>1</td>
+                        <td>短</td>
+                        <td>得到5張短冊牌,每多獲得一張短冊牌結算時點數加1。</td>
+                    </tr>
+                        <tr align="center">
+                        <td>1</td>
+                        <td>種</td>
+                        <td>5張任意種牌,每多獲得一張種牌結算時點數加1。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>1</td>
+                        <td>滓(雜牌)</td>
+                        <td>得到10張滓牌,每多獲得一張滓牌結算時點數加1。</td>
+                    </tr>
+                    <tr align="center">
+                        <td>6</td>
+                        <td>手四</td>
+                        <td>一開始時手牌中即持有一組(一個月份)中的四張牌。
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>6</td>
+                        <td>喰付</td>
+                        <td>一開始時手牌中即持有四組配對。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="card_images">
+                <h2 class="title">卡牌種類</h2>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            ASSET_DIR = "../asset";
+            CARD_DIR = "../asset/cards";
+            INFO_FILE = "../asset/card_info.json"
+            
+            d3.json(INFO_FILE)
+                .then(
+                    function(data) {
+                        var grid = d3.select("div#card_images")
+                                        .append("div")
+                                        .attr("id", "grid")
+                                        .attr("class", "grid");
+
+                        var cards = grid.selectAll("div")
+                                    .data(data)
+                                    .enter()
+                                    .append("div")
+                                    .attr("class", "char");
+                        
+                        cards.style("background-image", function(d) {
+                                    return "url("+ CARD_DIR + "/" + d.card_image + ")";
+                        });
+
+                        var content = cards.append("div")
+                                        .attr("class", "charContent");
+           
+                        content.append("p")
+                                .text(function(d, i){
+                                    return d.card_name + " (" + d.month_text + ")";
+                                });  
+                    }
+            );
+        </script>
+    </body>
+</html>

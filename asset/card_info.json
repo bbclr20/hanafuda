@@ -1,0 +1,483 @@
+[
+    {
+        "card_name": "松上鶴",
+        "card_image": "松上鶴.png",
+        "card_month": 1,
+        "month_text": "一月",
+        "card_type": "種",
+        "special_type": [
+            "光"
+        ]
+    },
+    {
+        "card_name": "松上赤短",
+        "card_image": "松上赤短.png",
+        "card_month": 1,
+        "month_text": "一月",
+        "card_type": "短",
+        "special_type": [
+            "赤短"
+        ]
+    },
+    {
+        "card_name": "松",
+        "card_image": "松_1.png",
+        "card_month": 1,
+        "month_text": "一月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "松",
+        "card_image": "松_2.png",
+        "card_month": 1,
+        "month_text": "一月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "梅上鶯",
+        "card_image": "梅上鶯.png",
+        "card_month": 2,
+        "month_text": "二月",
+        "card_type": "種",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "梅上赤短",
+        "card_image": "梅上赤短.png",
+        "card_month": 2,
+        "month_text": "二月",
+        "card_type": "短",
+        "special_type": [
+            "赤短"
+        ]
+    },
+    {
+        "card_name": "梅",
+        "card_image": "梅_1.png",
+        "card_month": 2,
+        "month_text": "二月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "梅",
+        "card_image": "梅_2.png",
+        "card_month": 2,
+        "month_text": "二月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "櫻上幕",
+        "card_image": "櫻上幕.png",
+        "card_month": 3,
+        "month_text": "三月",
+        "card_type": "光",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "櫻上赤短",
+        "card_image": "櫻上赤短.png",
+        "card_month": 3,
+        "month_text": "三月",
+        "card_type": "短",
+        "special_type": [
+            "赤短"
+        ]
+    },
+    {
+        "card_name": "櫻",
+        "card_image": "櫻_1.png",
+        "card_month": 3,
+        "month_text": "三月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "櫻",
+        "card_image": "櫻_2.png",
+        "card_month": 3,
+        "month_text": "三月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "藤上鵑",
+        "card_image": "藤上鵑.png",
+        "card_month": 4,
+        "month_text": "四月",
+        "card_type": "種",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "藤上短冊",
+        "card_image": "藤上短冊.png",
+        "card_month": 4,
+        "month_text": "四月",
+        "card_type": "短",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "藤",
+        "card_image": "藤_1.png",
+        "card_month": 4,
+        "month_text": "四月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "藤",
+        "card_image": "藤_2.png",
+        "card_month": 4,
+        "month_text": "四月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "蒲間八橋",
+        "card_image": "蒲間八橋.png",
+        "card_month": 5,
+        "month_text": "五月",
+        "card_type": "種",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "蒲上短冊",
+        "card_image": "蒲上短冊.png",
+        "card_month": 5,
+        "month_text": "五月",
+        "card_type": "短",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "菖蒲",
+        "card_image": "菖蒲_1.png",
+        "card_month": 5,
+        "month_text": "五月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "菖蒲",
+        "card_image": "菖蒲_2.png",
+        "card_month": 5,
+        "month_text": "五月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "牡丹蝴蝶",
+        "card_image": "牡丹蝴蝶.png",
+        "card_month": 6,
+        "month_text": "六月",
+        "card_type": "種",
+        "special_type": [
+            "豬鹿蝶"
+        ]
+    },
+    {
+        "card_name": "牡丹青短",
+        "card_image": "牡丹青短.png",
+        "card_month": 6,
+        "month_text": "六月",
+        "card_type": "短",
+        "special_type": [
+            "青短"
+        ]
+    },
+    {
+        "card_name": "牡丹",
+        "card_image": "牡丹_1.png",
+        "card_month": 6,
+        "month_text": "六月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "牡丹",
+        "card_image": "牡丹_2.png",
+        "card_month": 6,
+        "month_text": "六月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "萩間野豬",
+        "card_image": "萩間野豬.png",
+        "card_month": 7,
+        "month_text": "七月",
+        "card_type": "種",
+        "special_type": [
+            "豬鹿蝶"
+        ]
+    },
+    {
+        "card_name": "萩上短冊",
+        "card_image": "萩上短冊.png",
+        "card_month": 7,
+        "month_text": "七月",
+        "card_type": "短",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "萩",
+        "card_image": "萩_1.png",
+        "card_month": 7,
+        "month_text": "七月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "萩",
+        "card_image": "萩_2.png",
+        "card_month": 7,
+        "month_text": "七月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "芒上月",
+        "card_image": "芒上月.png",
+        "card_month": 8,
+        "month_text": "八月",
+        "card_type": "光",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "芒上雁",
+        "card_image": "芒上雁.png",
+        "card_month": 8,
+        "month_text": "八月",
+        "card_type": "種",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "芒",
+        "card_image": "芒_1.png",
+        "card_month": 8,
+        "month_text": "八月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "芒",
+        "card_image": "芒_2.png",
+        "card_type": "雜牌",
+        "card_month": 8,
+        "month_text": "八月",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "菊上盃",
+        "card_image": "菊上盃.png",
+        "card_month": 9,
+        "month_text": "九月",
+        "card_type": "種",
+        "special_type": [
+            "賞花一浮白",
+            "賞月一浮白"
+        ]
+    },
+    {
+        "card_name": "菊上青短",
+        "card_image": "菊上青短.png",
+        "card_month": 9,
+        "month_text": "九月",
+        "card_type": "短",
+        "special_type": [
+            "青短"
+        ]
+    },
+    {
+        "card_name": "菊",
+        "card_image": "菊_1.png",
+        "card_month": 9,
+        "month_text": "九月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "菊",
+        "card_image": "菊_2.png",
+        "card_month": 9,
+        "month_text": "九月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "楓間鹿",
+        "card_image": "楓間鹿.png",
+        "card_month": 10,
+        "month_text": "十月",
+        "card_type": "種",
+        "special_type": [
+            "豬鹿蝶"
+        ]
+    },
+    {
+        "card_name": "楓上青短",
+        "card_image": "楓上青短.png",
+        "card_month": 10,
+        "month_text": "十月",
+        "card_type": "短",
+        "special_type": [
+            "青短"
+        ]
+    },
+    {
+        "card_name": "楓",
+        "card_image": "楓_1.png",
+        "card_month": 10,
+        "month_text": "十月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "楓",
+        "card_image": "楓_2.png",
+        "card_month": 10,
+        "month_text": "十月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "柳間小野道風",
+        "card_image": "柳間小野道風.png",
+        "card_month": 11,
+        "month_text": "十一月",
+        "card_type": "光",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "柳上燕",
+        "card_image": "柳上燕.png",
+        "card_month": 11,
+        "month_text": "十一月",
+        "card_type": "種",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "柳上短冊",
+        "card_image": "柳上短冊.png",
+        "card_month": 11,
+        "month_text": "十一月",
+        "card_type": "短",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "柳雷雨鼓",
+        "card_image": "柳雷雨鼓.png",
+        "card_month": 11,
+        "month_text": "十一月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "桐上鳳凰",
+        "card_image": "桐上鳳凰.png",
+        "card_month": 12,
+        "month_text": "十二月",
+        "card_type": "光",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "桐",
+        "card_image": "桐_1.png",
+        "card_month": 12,
+        "month_text": "十二月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "桐",
+        "card_image": "桐_2.png",
+        "card_month": 12,
+        "month_text": "十二月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    },
+    {
+        "card_name": "桐",
+        "card_image": "桐_3.png",
+        "card_month": 12,
+        "month_text": "十二月",
+        "card_type": "雜牌",
+        "special_type": [
+            ""
+        ]
+    }
+]
